@@ -1,15 +1,3 @@
-/* Nueva paleta de colores personalizada */
-:root {
-    --bg-principal: #0b1118;         /* Negro azulado */
-    --bg-secundario: #162532;        /* Azul oscuro intermedio */
-    --bg-tarjeta: #1e2b38;           /* Azul grisáceo oscuro */
-    --texto-principal: #f4f6f8;      /* Blanco suave */
-    --texto-secundario: #7a8c9e;     /* Gris azulado */
-    --color-acento: #00f2fe;         /* Turquesa / Acento médico */
-    --acento-secundario: #0056b3;    /* Azul */
-    --hover-brillante: #00ffff;      /* Turquesa brillante */
-}
-
 /* Configuración general */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
