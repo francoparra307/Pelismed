@@ -6,3 +6,21 @@ body {
     margin: 0;
     padding: 40px;
 }
+/* Encabezado con fondo secundario y borde azul */
+header {
+    background-color: #162532;        /* Azul oscuro intermedio */
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 3px solid #0056b3; /* Acento secundario azul */
+    margin: -40px -40px 40px -40px;   /* Resetea el padding del body para que ocupe todo el ancho */
+}
+
+/* Título principal en Turquesa */
+header h1 {
+    font-size: 3.5rem;
+    color: #00f2fe;                  /* Turquesa / Acento médico */
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+}
