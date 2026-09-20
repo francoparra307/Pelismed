@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PelisMed</title>
-   <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <!-- Título principal en grande -->
-    <header>
-        <h1>PelisMed</h1>
-    </header>
-
     <main>
-        <!-- Categoría de Películas -->
-        <section>
+        <!-- Botones de Categorías -->
+        <div class="category-buttons">
+            <button class="btn-category active">Todas</button>
+            <button class="btn-category">Películas</button>
+            <button class="btn-category">Series</button>
+        </div>
+
+        <!-- Sección de Películas -->
+        <section class="content-section">
             <h2>Películas</h2>
             <ul>
                 <li>Película de Acción 1</li>
@@ -24,8 +16,8 @@
             </ul>
         </section>
 
-        <!-- Categoría de Series -->
-        <section>
+        <!-- Sección de Series -->
+        <section class="content-section">
             <h2>Series</h2>
             <ul>
                 <li>Serie de Suspenso 1</li>
@@ -34,10 +26,3 @@
             </ul>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2026 PelisMed</p>
-    </footer>
-
-</body>
-</html>
