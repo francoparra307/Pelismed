@@ -1,26 +1,112 @@
-/* Solo el fondo principal negro azulado y el texto blanco suave */
-body {
-    background-color: #0b1118;
-    color: #f4f6f8;
-    font-family: sans-serif;
-    margin: 0;
-    padding: 40px;
-}
-/* Encabezado con fondo secundario y borde azul */
-header {
-    background-color: #162532;        /* Azul oscuro intermedio */
-    padding: 40px 20px;
-    text-align: center;
-    border-bottom: 3px solid #0056b3; /* Acento secundario azul */
-    margin: -40px -40px 40px -40px;   /* Resetea el padding del body para que ocupe todo el ancho */
+/* ==========================================================================
+   PALETA DE COLORES PERSONALIZADA (PelisMed)
+   ========================================================================== */
+:root {
+    --bg-principal: #0b1118;         /* Negro azulado */
+    --bg-secundario: #162532;        /* Azul oscuro intermedio */
+    --bg-tarjeta: #1e2b38;           /* Azul grisáceo oscuro */
+    --texto-principal: #f4f6f8;      /* Blanco suave */
+    --texto-secundario: #7a8c9e;     /* Gris azulado */
+    --color-acento: #00f2fe;         /* Turquesa / Acento médico */
+    --acento-secundario: #0056b3;    /* Azul */
+    --hover-brillante: #00ffff;      /* Turquesa brillante */
 }
 
-/* Título principal en Turquesa */
+/* ==========================================================================
+   ESTILOS GENERALES
+   ========================================================================== */
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   ENCABEZADO (Header)
+   ========================================================================== */
+header {
+    background-color: var(--bg-secundario);
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--acento-secundario);
+}
+
 header h1 {
     font-size: 3.5rem;
-    color: #00f2fe;                  /* Turquesa / Acento médico */
+    color: var(--color-acento);
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 4px;
     text-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+}
+
+/* ==========================================================================
+   CONTENIDO PRINCIPAL Y CATEGORÍAS
+   ========================================================================== */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Títulos de Películas y Series */
+section h2 {
+    font-size: 1.8rem;
+    color: var(--texto-principal);
+    border-left: 5px solid var(--color-acento);
+    padding-left: 12px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   GRILLA Y TARJETAS (Listas de contenido)
+   ========================================================================== */
+ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+li {
+    background-color: var(--bg-tarjeta);
+    color: var(--texto-principal);
+    padding: 40px 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: 1px solid var(--bg-secundario);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+}
+
+/* Efecto Hover Turquesa Brillante */
+li:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 255, 255, 0.25);
+    border-color: var(--hover-brillante);
+    color: var(--hover-brillante);
+}
+
+/* ==========================================================================
+   PIE DE PÁGINA (Footer)
+   ========================================================================== */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--bg-secundario);
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+    margin-top: 60px;
+    border-top: 1px solid rgba(0, 242, 254, 0.1);
 }
