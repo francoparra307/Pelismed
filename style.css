@@ -110,3 +110,40 @@ footer {
     margin-top: 60px;
     border-top: 1px solid rgba(0, 242, 254, 0.1);
 }
+/* ==========================================================================
+   BOTONES DE CATEGORÍAS
+   ========================================================================== */
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0 10px 0;
+}
+
+.btn-category {
+    background-color: var(--bg-tarjeta);
+    color: var(--texto-secundario);
+    border: 2px solid var(--bg-secundario);
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Estado cuando pasas el mouse por encima */
+.btn-category:hover {
+    color: var(--hover-brillante);
+    border-color: var(--hover-brillante);
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Estado del botón seleccionado/activo */
+.btn-category.active {
+    background-color: var(--color-acento);
+    color: var(--bg-principal);
+    border-color: var(--color-acento);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+}
