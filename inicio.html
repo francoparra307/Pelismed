@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PelisMed - Películas y Series en Línea</title>
+    <style>
+        /* Estilos básicos para dar estructura y oscuridad (estilo streaming) */
+        :root {
+            --bg-color: #141414;
+            --text-color: #ffffff;
+            --accent-color: #e50914;
+            --card-bg: #2f2f2f;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 4%;
+            background-color: rgba(0, 0, 0, 0.8);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        main {
+            padding: 40px 4%;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            margin: 0 0 10px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #b3b3b3;
+        }
+
+        .rating {
+            color: #f5c518;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #000;
+            color: #757575;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado de la página -->
+    <header>
+        <a href="#" class="logo">PelisMed</a>
+        <nav>
+            <ul>
+                <li><a href="#peliculas">Películas</a></li>
+                <li><a href="#series">Series</a></li>
+                <li><a href="#estrenos">Estrenos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main>
+
+        <!-- Sección de Películas -->
+        <section id="peliculas">
+            <h2 class="section-title">Películas Destacadas</h2>
+            <div class="grid-container">
+                
+                <!-- Tarjeta de Película 1 -->
+                <article class="card">
+                    <img src="https://placeholder.com" alt="Título de la Película">
+                    <div class="card-content">
+                        <h3 class="card-title">Título de la Película 1</h3>
+                        <div class="card-info">
+                            <span>2026</span>
+                            <span class="rating">★ 8.5</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta de Película 2 -->
+                <article class="card">
+                    <img src="https://placeholder.com" alt="Título de la Película">
+                    <div class="card-content">
+                        <h3 class="card-title">Título de la Película 2</h3>
+                        <div class="card-info">
+                            <span>2025</span>
+                            <span class="rating">★ 7.2</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Puedes duplicar este bloque de 'article' para añadir más películas -->
+
+            </div>
+        </section>
+
+        <!-- Sección de Series -->
+        <section id="series">
+            <h2 class="section-title">Series Populares</h2>
+            <div class="grid-container">
+                
+                <!-- Tarjeta de Serie 1 -->
+                <article class="card">
+                    <img src="https://placeholder.com" alt="Título de la Serie">
+                    <div class="card-content">
+                        <h3 class="card-title">Título de la Serie 1</h3>
+                        <div class="card-info">
+                            <span>T1 (2026)</span>
+                            <span class="rating">★ 9.0</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta de Serie 2 -->
+                <article class="card">
+                    <img src="https://placeholder.com" alt="Título de la Serie">
+                    <div class="card-content">
+                        <h3 class="card-title">Título de la Serie 2</h3>
+                        <div class="card-info">
+                            <span>T3 (2024)</span>
+                            <span class="rating">★ 8.1</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Puedes duplicar este bloque de 'article' para añadir más series -->
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 PelisMed. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
