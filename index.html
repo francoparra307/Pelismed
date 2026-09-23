@@ -1,29 +1,169 @@
-    <main>
-        <!-- Botones de Categorías -->
-        <div class="category-buttons">
-            <button class="btn-category active">Todas</button>
-            <button class="btn-category">Películas</button>
-            <button class="btn-category">Series</button>
+ 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PelisMed</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background:
+                radial-gradient(circle at top, #18243a 0%, #080b12 45%, #05070b 100%);
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contenedor {
+            width: 90%;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 4rem;
+            font-weight: 800;
+            letter-spacing: -2px;
+            margin-bottom: 10px;
+        }
+
+        .logo span {
+            color: #29b6f6;
+        }
+
+        .descripcion {
+            color: #aeb8c7;
+            font-size: 1.1rem;
+            margin-bottom: 50px;
+        }
+
+        .botones {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .boton {
+            width: 280px;
+            height: 170px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-decoration: none;
+            color: white;
+
+            border-radius: 20px;
+
+            background: linear-gradient(
+                145deg,
+                #16243a,
+                #0d1422
+            );
+
+            border: 1px solid #263852;
+
+            box-shadow:
+                0 15px 35px rgba(0, 0, 0, 0.45);
+
+            transition: all 0.25s ease;
+        }
+
+        .boton:hover {
+            transform: translateY(-8px) scale(1.03);
+
+            border-color: #29b6f6;
+
+            box-shadow:
+                0 20px 45px rgba(41, 182, 246, 0.20);
+        }
+
+        .icono {
+            font-size: 3.5rem;
+            margin-bottom: 12px;
+        }
+
+        .texto {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 55px;
+            color: #596578;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+
+            .logo {
+                font-size: 3rem;
+            }
+
+            .descripcion {
+                font-size: 1rem;
+                margin-bottom: 35px;
+            }
+
+            .boton {
+                width: 100%;
+                max-width: 330px;
+                height: 145px;
+            }
+
+            .icono {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="contenedor">
+
+        <h1 class="logo">
+            Pelis<span>Med</span>
+        </h1>
+
+        <p class="descripcion">
+            Catálogo audiovisual educativo
+        </p>
+
+        <div class="botones">
+
+            <a href="peliculas.html" class="boton">
+                <div class="icono">🎬</div>
+                <div class="texto">Películas</div>
+            </a>
+
+            <a href="series.html" class="boton">
+                <div class="icono">📺</div>
+                <div class="texto">Series</div>
+            </a>
+
         </div>
 
-        <!-- Sección de Películas -->
-        <section class="content-section">
-            <h2><a href="pelicula.html" class="btn-play">▶Película</a>
-s </h2>
-            <ul>
-                <li>Película de Acción 1</li>
-                <li>Película de Drama 2</li>
-                <li>Película de Ciencia Ficción 3</li>
-            </ul>
-        </section>
+        <footer>
+            PelisMed
+        </footer>
 
-        <!-- Sección de Series -->
-        <section class="content-section">
-            <h2>Series</h2>
-            <ul>
-                <li>Serie de Suspenso 1</li>
-                <li>Serie de Comedia 2</li>
-                <li>Serie de Animación 3</li>
-            </ul>
-        </section>
     </main>
+
+</body>
+</html>
